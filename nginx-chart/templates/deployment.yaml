@@ -19,4 +19,4 @@ spec:
       - name: nginx
         image: "{{ .Values.nginx.image }}:{{ .Values.nginx.tag }}"
         ports:
-        - containerPort: 80
+        - containerPort: 3000
