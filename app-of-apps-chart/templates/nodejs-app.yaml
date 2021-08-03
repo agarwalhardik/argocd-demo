@@ -15,7 +15,7 @@ spec:
   source:
     path: nodejs-chart
     repoURL: 'https://github.com/agarwalhardik/argocd-demo.git'
-    targetRevision: {{ .apps.nodejsApp.branch }}
+    targetRevision: 'HEAD'
   syncPolicy:
     automated:
       prune: true
