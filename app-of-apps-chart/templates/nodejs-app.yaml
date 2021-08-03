@@ -1,4 +1,4 @@
-{{- range cluster-1 }}
+{{- range cluster1 }}
 {{- if true }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application

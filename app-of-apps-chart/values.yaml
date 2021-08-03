@@ -1,5 +1,5 @@
 clusters:
-- name: cluster-1
+- name: cluster1
   destinationServer: https://kubernetes.default.svc
   apps:
     prometheus:
@@ -12,7 +12,7 @@ clusters:
       enabled: true
       branch: HEAD
 
-- name: cluster-2
+- name: cluster2
   destinationServer: https://35.223.102.52
   apps:
    prometheus:
