@@ -1,4 +1,0 @@
-nodejs:
-  replicas: 1
-  image: gcr.io/searce-playground/nodejs
-  tag: "v1"

@@ -18,6 +18,3 @@ clusters:
    sampleApp:
      enabled: true
      branch: HEAD
-   nodejsApp:
-    enabled: true
-    branch: HEAD
