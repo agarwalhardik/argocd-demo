@@ -1,5 +1,5 @@
 clusters:
-- name: minikube
+- name: cluster-1
   destinationServer: https://kubernetes.default.svc
   apps:
     prometheus:
@@ -8,16 +8,16 @@ clusters:
     sampleApp:
       enabled: true
       branch: HEAD
+    nodejsApp:
+      enabled: true
+      branch: HEAD
 
-- name: gke
+- name: cluster-2
   destinationServer: https://35.223.102.52
   apps:
    prometheus:
      enabled: true
      version: "9.7.4"
    sampleApp:
-     enabled: true
-     branch: HEAD
-   nodejsApp:
      enabled: true
      branch: HEAD
