@@ -1,4 +1,5 @@
-{{- if true }}
+{{- range .Values.clusters }}
+{{- if .Values.clusters.apps.nodejsApp.enabled }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -9,14 +10,17 @@ metadata:
 spec:
   destination:
     namespace: default
-    server: https://kubernetes.default.svc
+    server: {{ .destinationServer }}
   project: default
   source:
     path: nodejs-chart
     repoURL: 'https://github.com/agarwalhardik/argocd-demo.git'
-    targetRevision: 'HEAD'
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+{{- end }}
+---
+
 {{- end }}
