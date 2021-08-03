@@ -1,6 +1,4 @@
 nginx:
   replicas: 1
-  # image: nginx
-  # tag: "1.7.9"
-  image: gcr.io/searce-playground/nodejs
-  tag: "v1"
+  image: nginx
+  tag: "1.7.9"

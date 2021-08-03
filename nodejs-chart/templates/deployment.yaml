@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nodejs-deployment
   labels:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
-    app: nginx
+    app: nodejs
 spec:
-  replicas: {{ .Values.nginx.replicas}}
+  replicas: {{ .Values.nodejs.replicas}}
   selector:
     matchLabels:
-      app: nginx
+      app: nodejs
   template:
     metadata:
       labels:
-        app: nginx
+        app: nodejs
     spec:
       containers:
-      - name: nginx
-        image: "{{ .Values.nginx.image }}:{{ .Values.nginx.tag }}"
+      - name: nodejs
+        image: "{{ .Values.nodejs.image }}:{{ .Values.nodejs.tag }}"
         ports:
-        - containerPort: 80
+        - containerPort: 3000
