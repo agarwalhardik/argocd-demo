@@ -1,5 +1,5 @@
 {{- range .Values.clusters }}
-{{- if .Values.clusters.apps.nodejsApp.enabled }}
+{{- if .apps.nodejsApp.enabled -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
