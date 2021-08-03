@@ -1,4 +1,4 @@
-{{- range .Values.clusters }}
+{{- range cluster-1 }}
 {{- if true }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
