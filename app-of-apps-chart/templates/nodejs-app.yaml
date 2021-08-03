@@ -10,7 +10,7 @@ metadata:
 spec:
   destination:
     namespace: default
-    server: {{ .destinationServer }}
+    server: https://kubernetes.default.svc
   project: default
   source:
     path: nodejs-chart
