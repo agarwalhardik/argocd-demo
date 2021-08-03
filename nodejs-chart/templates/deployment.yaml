@@ -3,10 +3,9 @@ kind: Deployment
 metadata:
   name: nodejs-deployment
   labels:
-    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
     app: nodejs
 spec:
-  replicas: {{ .Values.nodejs.replicas}}
+  replicas: 1
   selector:
     matchLabels:
       app: nodejs
@@ -17,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: "{{ .Values.nodejs.image }}:{{ .Values.nodejs.tag }}"
+        image: "gcr.io/searce-playground/nodejs:v1"
         ports:
         - containerPort: 3000
