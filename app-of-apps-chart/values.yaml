@@ -9,7 +9,7 @@ clusters:
       enabled: true
       branch: HEAD
     nodejsApp:
-      enabled: fals
+      enabled: false
 
 - name: cluster2
   destinationServer: https://35.223.102.52
